@@ -12,7 +12,7 @@ import Layout from "./Layout.jsx";
 import Comments from "./components/Comments.jsx";
 import UserProfile from "./components/UserProfile.jsx";
 const client = new ApolloClient({
-  uri: "http://localhost:4000/graphql",
+  uri: import.meta.env.VITE_API_URL,
   cache: new InMemoryCache(),
 });
 

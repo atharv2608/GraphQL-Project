@@ -11,12 +11,12 @@ function Card({
   return (
     <div className=" flex flex-col max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
       <div className="flex-grow">
-        <p href="#">
+        <span href="#">
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             {title}
           </h5>
         <Link to={`/user/${userId}`} className="text-indigo-500">Posted by: {userName}</Link>
-        </p>
+        </span>
         <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
           {body}
         </p>
