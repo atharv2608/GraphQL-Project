@@ -24,6 +24,11 @@ app.use(cors({
     }
   }
 }));
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*"); // Change "*" to specific origins in production
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
 app.use(bodyParser.json({ limit: "16kb" }));
 
